@@ -1,13 +1,25 @@
 <template>
-  <div class="home">
-
-  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div v-if="customers" class="customer-main-container">
+          <div class="row">
+            <div class="col" v-bind:key="item.id" v-for="item in customers">
+              <CustomerCard :customer="item" />
+            </div><!--/ col -->
+          </div><!--/ row -->
+        </div><!--/ customer-main-container -->
+      </div><!--/ col-lg-12 -->
+    </div><!--/ row -->
+  </div><!--/ container -->
 </template>
 
 <script>
+import CustomerCard from '@/components/CustomerCard.vue'
 
 export default {
   name: 'home',
+  components: { CustomerCard },
   data () {
     return {
       customers:[]
@@ -25,3 +37,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>
