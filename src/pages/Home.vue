@@ -4,7 +4,7 @@
       <div class="col-lg-12">
         <div v-if="customers" class="customer-main-container">
           <div class="row">
-            <div class="col" v-bind:key="item.id" v-for="item in customers">
+            <div class="col-lg-4 col-md-12" v-bind:key="item.id" v-for="item in customers">
               <CustomerCard :customer="item" />
             </div><!--/ col -->
           </div><!--/ row -->
