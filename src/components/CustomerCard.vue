@@ -5,7 +5,7 @@
 				<h5 class="card-title">{{customer.name}}</h5>
 				<h6 class="card-subtitle mb-3 text-muted">{{customer.email}}</h6>
 				<p class="card-text"><b>Address: </b> {{customer.address}}, {{customer.city}} {{customer.postal}}, {{customer.province}} {{customer.country}}</p>
-				<button type ="button" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#edit-information">EDIT</button>
+				<button type ="button" class="btn btn-lg btn-warning" data-toggle="modal" :data-target="dataTarget">EDIT</button>
 			</div>
 		</div>
 		<CustomerEditModal :customer="customer"/>
@@ -22,6 +22,14 @@ export default {
 		customer: {
 			type: Object,
 			default: null
+		}
+	},
+	computed: {
+		/**
+		 * @description Computed property to set data target to open the customer info edit modal.
+		 */
+		dataTarget () {
+			return `#modal-${this.customer.id}`
 		}
 	}
 }

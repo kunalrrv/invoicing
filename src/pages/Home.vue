@@ -4,7 +4,7 @@
       <div class="col-lg-12">
         <div v-if="customers" class="customer-main-container">
           <div class="row">
-            <div class="col-lg-4 col-md-12" v-bind:key="item.id" v-for="item in customers">
+            <div class="col-lg-4 col-md-12" v-for="(item, index) in customers" :key="index">
               <CustomerCard :customer="item" />
             </div><!--/ col -->
           </div><!--/ row -->
@@ -22,22 +22,20 @@ export default {
   components: { CustomerCard },
   data () {
     return {
-      customers:[]
+      customers: this.$store.state.customers
     }
   },
   /**
    * @description Mounted hook for the route component.
+   * - Checks if the store is persisting the customer records.
+   * - If not, then proceed to make the API call to get the records.
    */
   async mounted () {
-    return this.$store.dispatch('fetchCustomerInfo').then(response => {
-      return this.$store.dispatch('setCustomerInfo', response.data).then(() => {
-        this.customers = response.data.customers
-      })
+    return await this.$store.dispatch('fetchCustomerInfo').then(async response => {
+      this.customers = this.$store.state.customers
+    }).catch(err => {
+      console.log("Error: ", err)
     })
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
