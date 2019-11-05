@@ -24,6 +24,13 @@ OR
 yarn serve
 ```
 
+- In order to run the application in production mode, you can run the following command from the terminal
+```
+npm run serve:prod
+---OR---
+yarn serve:prod
+```
+
 ### Compiles and minifies for production
 - In order to create a build for the project, you can run the following command from the terminal.
 ```
@@ -38,6 +45,23 @@ yarn build
 - In order to lint the files based on your configuration. You can run the following command from the terminal.
 ```
 npm run lint
+```
+
+
+### E2E (End To End Testing)
+- In order to perform end to end testing, you can run the following command
+```
+npm run e2e
+```
+
+- In order to perform end to end testing in interactive mode with the Cypress window open, you can run the following command
+```
+npm run e2e:persist
+```
+
+- Cypress runs e2e test on its default electron browser in headless mode, but if you would like to run e2e tests in terminal with chrome (header), please run the following command
+```
+npm run 
 ```
 
 ### Implementation Details
