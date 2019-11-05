@@ -39,3 +39,15 @@ yarn build
 ```
 npm run lint
 ```
+
+### Implementation Details
+1) Implementation of all the aspects of the framework, such as router, store (vuex), persisted state, e2e testing.
+2) Implenmentation of SCSS, which shows the ability to work with various style languages & setup.
+3) Implementation of linting & documentation.
+4) Creating environment files.
+5) Ability to work with packages, frameworks as well as knowlegefull implmentation of tree shaking.
+
+### Other Features that can be implemented. 
+- Unit testing. 
+- CI/CD Setup.
+- Implementation of JSON Server/Stub for local stubbing.
