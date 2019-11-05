@@ -12,15 +12,15 @@ cd invoicing
 - In order to run the project, you will need to have all the required dependencies for the project. Please run the following command in order to install all the dependencies.
 ```
 npm install
+---OR---
+yarn
 ```
 
 ### Compiles and hot-reloads for development
 - In order to start a development server, you can run the following command from the terminal
 ```
 npm run serve
-```
-OR
-```
+---OR---
 yarn serve
 ```
 
@@ -38,9 +38,7 @@ yarn serve:prod
 - In order to create a build for the project, you can run the following command from the terminal.
 ```
 npm run build
-```
-OR
-```
+---OR---
 yarn build
 ```
 
@@ -48,6 +46,8 @@ yarn build
 - In order to lint the files based on your configuration. You can run the following command from the terminal.
 ```
 npm run lint
+---OR---
+yarn lint
 ```
 
 
@@ -55,16 +55,22 @@ npm run lint
 - In order to perform end to end testing, you can run the following command
 ```
 npm run e2e
+---OR---
+yarn e2e
 ```
 
 - In order to perform end to end testing in interactive mode with the Cypress window open, you can run the following command
 ```
 npm run e2e:persist
+---OR---
+yarn e2e:persist
 ```
 
 - Cypress runs e2e test on its default electron browser in headless mode, but if you would like to run e2e tests in terminal with chrome (header), please run the following command
 ```
 npm run e2e:chrome
+---OR---
+yarn e2e:chrome
 ```
 
 ### Implementation Details
