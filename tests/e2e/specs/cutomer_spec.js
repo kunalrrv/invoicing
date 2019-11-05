@@ -6,41 +6,41 @@ describe('Test Main screen', () => {
 		cy.visit('/')
 	})
 
-	it('Visits the Home page', () => {
-		cy.url().should('contain', 'home')
+	it('Lands on the homepage', () => {
+		cy.url().should('contain', '#/')
 	})
 
-	// it('Renders task tile', () => {
-	// 	cy.get('.task-list').find('li').should('have.length', 2)
-	// })
+	it('Renders 3 Customer tiles', () => {
+		cy.get('.customer-card').find('.card').should('have.length', 3)
+	})
 
-	// it('Should stay on same page on browse back but closes modal', () => {
-	// 	cy.go(-1)
-	// 	cy.hash().should('eq', '#/MainMenu')
-	// 	cy.get('.the-dialog').should('not.exist')
-	// })
+	it('Should stay on the same page on reload', () => {
+		cy.reload()
+		cy.url().should('contain', '#/')
+	})
 
-	// it('Should reload main-menu page', () => {
-	// 	cy.reload()
-	// 	cy.url().should('contain', 'MainMenu')
-	// })
+	it('Should Open Modal when clicked on the edit button', () => {
+		cy.clickWarningBtn(0)
+		cy.get('.modal.show', { timeout: 2000 }).should('have.length', 1)
+  })
+  
+  it('Should Close Modal when clicked on the Close button', () => {
+		cy.clickWarningBtn(0)
+    .get('.modal.show').should('have.length', 1)
+    .wait(1500)
+    
+    cy.get('.modal.fade .modal-footer button.btn-secondary').eq(0).click({ waitForAnimations: true, animationDistanceThreshold: 1000, force: true })
+  })
 
-	// it('Visits thank you page on clicking finish setup', () => {
-	// 	cy.clickActionbarTertiaryBtn()
-	// 	cy.url().should('contain', 'ThankYou')
-	// })
+  it('Should store the name change after submission', () => {
+		cy.clickWarningBtn(0)
+    .get('.modal.show').should('have.length', 1)
+    .wait(1500)
 
-	// it('Hide Remind Me Later Button when both the tasks are completed', () => {
-	// 	cy.signon("4442")
-	// 	cy.reload() // Reload to refresh the session entitlements
+    cy.get('.modal.fade input').eq(0).type('Long Name')
+    
+    cy.get('.modal.fade .modal-footer button.btn-primary').eq(0).click({ waitForAnimations: true, animationDistanceThreshold: 1000, force: true })
 
-	// 	cy.visit('/').then(() => {
-	// 		cy.url().should('contain', 'MainMenu')
-	// 	})
-
-	// 	cy.get('.secondary-btn').should('not.be.visible')
-
-	// 	cy.clickActionbarTertiaryBtn()
-	// 	cy.url().should('contain', 'ThankYou')
-	// })
+    cy.get('.customer-card .card').eq(0).find('h5.card-title').should('contain', 'A CustomerLong Name')
+  })
 })

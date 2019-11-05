@@ -23,3 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('clickWarningBtn', (element = 0) => {
+	cy.get('button.btn-warning').eq(element).click({ waitForAnimations: true, animationDistanceThreshold: 1000 })
+})
