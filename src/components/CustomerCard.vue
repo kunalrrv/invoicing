@@ -6,8 +6,8 @@
 				<h6 class="card-subtitle mb-3 text-muted">{{customer.email}}</h6>
 				<p class="card-text"><b>Address: </b> {{customer.address}}, {{customer.city}} {{customer.postal}}, {{customer.province}} {{customer.country}}</p>
 				<button type ="button" class="btn btn-lg btn-warning" data-toggle="modal" :data-target="dataTarget">EDIT</button>
-			</div>
-		</div>
+			</div><!--/ card-body -->
+		</div><!--/ card -->
 		<CustomerEditModal :customer="customer"/>
 	</div><!--/ customer-card -->
 </template>
