@@ -6,5 +6,10 @@ module.exports = {
 				prependData: `@import "@/styles/app.scss";`
 			}
 		}
-	}
+  },
+  pluginOptions: {
+    webpackBundleAnalyzer: {
+      openAnalyzer: false
+    }
+  }
 }

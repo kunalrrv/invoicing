@@ -24,6 +24,9 @@ OR
 yarn serve
 ```
 
+- Once the server starts, you can access the application by opening your browser and the URL as `http://localhost:8080`
+- In order to check your application size & bundle size, you can access the URL `http://localhost:8888` to see the bundle analyzer screen. 
+
 - In order to run the application in production mode, you can run the following command from the terminal
 ```
 npm run serve:prod
@@ -61,7 +64,7 @@ npm run e2e:persist
 
 - Cypress runs e2e test on its default electron browser in headless mode, but if you would like to run e2e tests in terminal with chrome (header), please run the following command
 ```
-npm run 
+npm run e2e:chrome
 ```
 
 ### Implementation Details
