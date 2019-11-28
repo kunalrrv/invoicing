@@ -27,6 +27,8 @@ This application had been created as a part of Wave Front-end Challenge.
 - CI/CD Setup.
 - Implementation of JSON Server/Stub for local stubbing.
 
+
+
 # Project Setup Instructions
 
 ## Cloning the project locally
