@@ -2,8 +2,32 @@
 This application had been created as a part of Wave Front-end Challenge.
 
 ## Demonstrated the usage of the following libraries/components
-- VUEX. What is Vuex
+1) VUEX. What is Vuex?
     - Vuex is a state management pattern + library for Vue.js applications
+    - Link: https://github.com/vuejs/vuex
+    - Demonstration of Persisted State Behavior.
+
+2) Bootstrap Library
+
+3) SASS Preprocessor & Autofixer
+
+4) Cypress. What is cypress?
+    - Cypress is a E2E testing framework for anything that runs in the browser.
+    - Link: https://www.cypress.io/
+
+## Implementation Details
+1) Implementation of all the aspects of the framework, such as router, store (vuex), persisted state, e2e testing.
+2) Implenmentation of SCSS, which shows the ability to work with various style languages & setup.
+3) Implementation of linting & documentation.
+4) Creating environment files.
+5) Ability to work with packages, frameworks as well as knowlegefull implmentation of tree shaking.
+
+## Other Features that can be implemented. 
+- Unit testing. 
+- CI/CD Setup.
+- Implementation of JSON Server/Stub for local stubbing.
+
+# Project Setup Instructions
 
 ## Cloning the project locally
 - In order to run the project locally you would need to clone the repository. Please run the following commands in order to clone the project using the choice of your terminal/operating system.
@@ -76,15 +100,3 @@ npm run e2e:chrome
 ---OR---
 yarn e2e:chrome
 ```
-
-### Implementation Details
-1) Implementation of all the aspects of the framework, such as router, store (vuex), persisted state, e2e testing.
-2) Implenmentation of SCSS, which shows the ability to work with various style languages & setup.
-3) Implementation of linting & documentation.
-4) Creating environment files.
-5) Ability to work with packages, frameworks as well as knowlegefull implmentation of tree shaking.
-
-### Other Features that can be implemented. 
-- Unit testing. 
-- CI/CD Setup.
-- Implementation of JSON Server/Stub for local stubbing.
