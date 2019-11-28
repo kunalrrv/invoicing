@@ -1,6 +1,10 @@
 # Invoicing Application
 This application had been created as a part of Wave Front-end Challenge.
 
+## Demonstrated the usage of the following libraries/components
+- VUEX. What is Vuex
+    - Vuex is a state management pattern + library for Vue.js applications
+
 ## Cloning the project locally
 - In order to run the project locally you would need to clone the repository. Please run the following commands in order to clone the project using the choice of your terminal/operating system.
 ```
